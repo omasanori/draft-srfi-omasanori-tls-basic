@@ -1,0 +1,114 @@
+= SRFI nnn: Basic TLS connection
+Masanori Ogino
+:toc: macro
+
+[discrete]
+== Status
+
+Early Draft
+
+toc::[]
+
+[abstract]
+== Abstract
+
+This SRFI specifies a set of interfaces to establish secure connections to
+peers and communicate with them using the Transport Layer Security (TLS)
+protocol. It focuses on simplicity and ease to use over flexibility and
+configurability, while it is intended to cover typical use cases.
+
+== Issues
+
+* Specify TLS configuration.
+* Specify TLS context.
+* "`It is an error`" vs. "`signaling an object satisfying the predicate`"
+* Predicates like `tls-context?` and such?
+
+== Rationale
+
+As described in RFC 7258, large-scale surveillance is recognized as a privacy
+threat nowadays, and the design of internet protocols has been shifting toward
+encrypted-by-default, using TLS or similar protocols. Thus, a portable API for
+TLS benefits programmers writing networking code.
+
+Historically, TLS libraries have provided a number of functions. However, it
+leads to bloat and misconfiguration, and ultimately, vulnerabilities. An API
+for secure communications should not require programmers a lot of work for
+achieving secure communications. This SRFI is significantly influenced by
+libtls, a TLS library developed by the OpenBSD community "`as a response to the
+unnecessary challenges other APIs present in order to use them safely.`" The
+interfaces, however, provides the room for extensions by future SRFIs and
+implementations.
+
+This SRFI requires a socket networking API, including but not limited to, SRFI 
+106. It assumes port I/O procedures are provided by the implementation. It
+defines version flags for implementations conforming to SRFI 176.
+
+== Specification
+
+??? detailed specification. This should be detailed enough that a conforming
+implementation could be completely created from this description.
+
+=== Procedure: `tls-client _conf -> context_`
+
+=== Procedure: `tls-connect-socket _context socket servername -> unspecified_`
+
+=== Procedure: `tls-server _conf -> context_`
+
+=== Procedure: `tls-accept-socket _context socket -> context_`
+
+=== Procedure: `tls-handshake _context -> unspecified_`
+
+=== Procedure: `tls-input-port _context -> port_`
+
+=== Procedure: `tls-output-port _context -> port_`
+
+=== Procedure: `tls-close _context -> unspecified_`
+
+=== Procedure: `tls-reset _context -> unspecified_`
+
+=== Version flag: `tls.name`
+
+=== Version flag: `tls.version`
+
+== Examples
+
+== Implementation
+
+??? explanation of how it meets the sample implementation requirement (see
+process), and the code, if possible, or a link to it.
+
+== Acknowledgements
+
+??? Give credits where credits is due.
+
+== References
+
+* Farrell, S. and Tschofenig, H., "`Pervasive Monitoring Is an Attack`", BCP 188, RFC 7258, May 2014.
+* Rescorla, E., "`The Transport Layer Security (TLS) Protocol Version 1.3`", RFC 8446, August 2018.
+* Sheffer, Y., Holz, R., and Saint-Andre, P., "`Recommendations for Secure Use of Transport Layer Security (TLS) and Datagram Transport Layer Security (DTLS)`", BCP 195, RFC 7525, May 2015. 
+* Moriarty, K. and Farrell, S., "`Deprecating TLS 1.0 and TLS 1.1`", BCP 195, RFC 8996, March 2021.
+* Friedl, S., Popov, A., Langley, A., and Stephan, E., "`Transport Layer Security (TLS) Application-Layer Protocol Negotiation Extension`", RFC 7301, July 2014.
+* Sing, J., et al., "`tls_init, tls_config_new, tls_config_free, tls_config_error — initialize TLS client and server API`", tls_init(3), OpenBSD manual pages, July 2018.
+* Vehent, J., et al., "`Server Side TLS`", Mozilla Wiki, April 2022. Available at https://wiki.mozilla.org/Security/Server_Side_TLS.
+
+== Copyright
+
+Copyright &copy; 2022 Masanori Ogino
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
