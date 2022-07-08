@@ -22,8 +22,7 @@ configurability, while it is intended to cover typical use cases.
 * Specify TLS configuration.
 * Specify TLS context.
 * "`It is an error`" vs. "`signaling an object satisfying the predicate`"
-* ALPN?
-* OCSP stapling?
+* Reconsider ALPN and OCSP support.
 
 == Rationale
 
@@ -46,6 +45,19 @@ assumes port I/O procedures are provided. It defines feature identifiers and
 version flags for implementations with relevant functionalities.
 
 === Omitted features and interfaces
+
+This SRFI omits various interfaces provided by libtls due to insecurity, lack
+of portability, or uncommon usage.
+
+It omits file-based interfaces because ...
+
+It omits configuration for insecure connections because ...
+
+It omits inspection of established connections because ...
+
+It omits Application-Layer Protocol Negotiation (ALPN) because ...
+
+It omits Online Certificate Status Protocol (OCSP) because ...
 
 == Specification
 
