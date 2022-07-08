@@ -37,7 +37,7 @@ for secure communications should not require programmers a lot of work for
 achieving secure communications. This SRFI is significantly influenced by
 libtls, a TLS library developed by the OpenBSD community "`as a response to the
 unnecessary challenges other APIs present in order to use them safely.`" The
-interfaces, however, provides the room for extensions by future SRFIs and
+interfaces, however, provide the room for extensions by future SRFIs and
 implementations.
 
 This SRFI requires a socket API, including but not limited to, SRFI 106. It
