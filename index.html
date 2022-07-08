@@ -456,9 +456,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_abstract">Abstract</a></li>
 <li><a href="#_issues">Issues</a></li>
-<li><a href="#_rationale">Rationale</a></li>
+<li><a href="#_rationale">Rationale</a>
+<ul class="sectlevel2">
+<li><a href="#_omitted_features_and_interfaces">Omitted features and interfaces</a></li>
+</ul>
+</li>
 <li><a href="#_specification">Specification</a>
 <ul class="sectlevel2">
+<li><a href="#_procedure_tls_configuration_object_boolean">Procedure: <code>tls-configuration? <em>object &#8594; boolean</em></code></a></li>
+<li><a href="#_procedure_tls_context_object_boolean">Procedure: <code>tls-context? <em>object &#8594; boolean</em></code></a></li>
+<li><a href="#_procedure_tls_configuration_conf">Procedure: <code>tls-configuration <em>&#8594; conf</em></code></a></li>
+<li><a href="#_procedure_tls_set_protocols_conf_protocol_protocol_unspecified">Procedure: <code>tls-set-protocols <em>conf protocol [protocol &#8230;&#8203;] &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_set_ciphers_conf_cipher_cipher_unspecified">Procedure: <code>tls-set-ciphers <em>conf cipher [cipher &#8230;&#8203;] &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_set_alpn_conf_alpn_identifier_alpn_identifier_unspecified">Procedure: <code>tls-set-alpn <em>conf alpn-identifier [alpn-identifier &#8230;&#8203;] &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_load_from_port_port_password_mem">Procedure: <code>tls-load-from-port <em>port [password] &#8594; mem</em></code></a></li>
+<li><a href="#_procedure_tls_unload_mem_unspecified">Procedure: <code>tls-unload <em>mem &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_set_ca_conf_cert_unspecified">Procedure: <code>tls-set-ca <em>conf cert &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_set_cert_conf_cert_unspecified">Procedure: <code>tls-set-cert <em>conf cert &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_set_crl_conf_crl_unspecified">Procedure: <code>tls-set-crl <em>conf crl &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_set_key_conf_key_unspecified">Procedure: <code>tls-set-key <em>conf key &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_set_keypair_conf_cert_key_unspecified">Procedure: <code>tls-set-keypair <em>conf cert key &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_add_keypair_conf_cert_key_unspecified">Procedure: <code>tls-add-keypair <em>conf cert key &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_clear_keys_conf_unspecified">Procedure: <code>tls-clear-keys <em>conf &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_set_verify_depth_conf_depth_unspecified">Procedure: <code>tls-set-verify-depth <em>conf depth &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_verify_client_conf_unspecified">Procedure: <code>tls-verify-client <em>conf &#8594; unspecified</em></code></a></li>
+<li><a href="#_procedure_tls_verify_client_optional_conf_unspecified">Procedure: <code>tls-verify-client-optional <em>conf &#8594; unspecified</em></code></a></li>
 <li><a href="#_procedure_tls_client_conf_context">Procedure: <code>tls-client <em>conf &#8594; context</em></code></a></li>
 <li><a href="#_procedure_tls_connect_socket_context_socket_servername_unspecified">Procedure: <code>tls-connect-socket <em>context socket servername &#8594; unspecified</em></code></a></li>
 <li><a href="#_procedure_tls_server_conf_context">Procedure: <code>tls-server <em>conf &#8594; context</em></code></a></li>
@@ -507,7 +529,7 @@ configurability, while it is intended to cover typical use cases.</p>
 <p>&#8220;It is an error&#8221; vs. &#8220;signaling an object satisfying the predicate&#8221;</p>
 </li>
 <li>
-<p>Predicates like <code>tls-context?</code> and such?</p>
+<p>OCSP stapling?</p>
 </li>
 </ul>
 </div>
@@ -533,9 +555,13 @@ interfaces, however, provides the room for extensions by future SRFIs and
 implementations.</p>
 </div>
 <div class="paragraph">
-<p>This SRFI requires a socket networking API, including but not limited to, SRFI
-106. It assumes port I/O procedures are provided by the implementation. It
-defines version flags for implementations conforming to SRFI 176.</p>
+<p>This SRFI requires a socket API, including but not limited to, SRFI 106. It
+assumes port I/O procedures are provided. It defines version flags for
+implementations conforming to SRFI 176.</p>
+</div>
+<div class="sect2">
+<h3 id="_omitted_features_and_interfaces">Omitted features and interfaces</h3>
+
 </div>
 </div>
 </div>
@@ -545,6 +571,78 @@ defines version flags for implementations conforming to SRFI 176.</p>
 <div class="paragraph">
 <p>??? detailed specification. This should be detailed enough that a conforming
 implementation could be completely created from this description.</p>
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_configuration_object_boolean">Procedure: <code>tls-configuration? <em>object &#8594; boolean</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_context_object_boolean">Procedure: <code>tls-context? <em>object &#8594; boolean</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_configuration_conf">Procedure: <code>tls-configuration <em>&#8594; conf</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_protocols_conf_protocol_protocol_unspecified">Procedure: <code>tls-set-protocols <em>conf protocol [protocol &#8230;&#8203;] &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_ciphers_conf_cipher_cipher_unspecified">Procedure: <code>tls-set-ciphers <em>conf cipher [cipher &#8230;&#8203;] &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_alpn_conf_alpn_identifier_alpn_identifier_unspecified">Procedure: <code>tls-set-alpn <em>conf alpn-identifier [alpn-identifier &#8230;&#8203;] &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_load_from_port_port_password_mem">Procedure: <code>tls-load-from-port <em>port [password] &#8594; mem</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_unload_mem_unspecified">Procedure: <code>tls-unload <em>mem &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_ca_conf_cert_unspecified">Procedure: <code>tls-set-ca <em>conf cert &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_cert_conf_cert_unspecified">Procedure: <code>tls-set-cert <em>conf cert &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_crl_conf_crl_unspecified">Procedure: <code>tls-set-crl <em>conf crl &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_key_conf_key_unspecified">Procedure: <code>tls-set-key <em>conf key &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_keypair_conf_cert_key_unspecified">Procedure: <code>tls-set-keypair <em>conf cert key &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_add_keypair_conf_cert_key_unspecified">Procedure: <code>tls-add-keypair <em>conf cert key &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_clear_keys_conf_unspecified">Procedure: <code>tls-clear-keys <em>conf &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_set_verify_depth_conf_depth_unspecified">Procedure: <code>tls-set-verify-depth <em>conf depth &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_verify_client_conf_unspecified">Procedure: <code>tls-verify-client <em>conf &#8594; unspecified</em></code></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_procedure_tls_verify_client_optional_conf_unspecified">Procedure: <code>tls-verify-client-optional <em>conf &#8594; unspecified</em></code></h3>
+
 </div>
 <div class="sect2">
 <h3 id="_procedure_tls_client_conf_context">Procedure: <code>tls-client <em>conf &#8594; context</em></code></h3>
@@ -676,7 +774,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-08 12:00:00 +0900
+Last updated 1980-01-01 00:00:00 UTC
 </div>
 </div>
 </body>

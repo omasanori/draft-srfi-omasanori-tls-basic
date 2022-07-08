@@ -22,7 +22,7 @@ configurability, while it is intended to cover typical use cases.
 * Specify TLS configuration.
 * Specify TLS context.
 * "`It is an error`" vs. "`signaling an object satisfying the predicate`"
-* Predicates like `tls-context?` and such?
+* OCSP stapling?
 
 == Rationale
 
@@ -40,14 +40,52 @@ unnecessary challenges other APIs present in order to use them safely.`" The
 interfaces, however, provides the room for extensions by future SRFIs and
 implementations.
 
-This SRFI requires a socket networking API, including but not limited to, SRFI 
-106. It assumes port I/O procedures are provided by the implementation. It
-defines version flags for implementations conforming to SRFI 176.
+This SRFI requires a socket API, including but not limited to, SRFI 106. It
+assumes port I/O procedures are provided. It defines version flags for
+implementations conforming to SRFI 176.
+
+=== Omitted features and interfaces
 
 == Specification
 
 ??? detailed specification. This should be detailed enough that a conforming
 implementation could be completely created from this description.
+
+=== Procedure: `tls-configuration? _object -> boolean_`
+
+=== Procedure: `tls-context? _object -> boolean_`
+
+=== Procedure: `tls-configuration _-> conf_`
+
+=== Procedure: `tls-set-protocols _conf protocol [protocol ...] -> unspecified_`
+
+=== Procedure: `tls-set-ciphers _conf cipher [cipher ...] -> unspecified_`
+
+=== Procedure: `tls-set-alpn _conf alpn-identifier [alpn-identifier ...] -> unspecified_`
+
+=== Procedure: `tls-load-from-port _port [password] -> mem_`
+
+=== Procedure: `tls-unload _mem -> unspecified_`
+
+=== Procedure: `tls-set-ca _conf cert -> unspecified_`
+
+=== Procedure: `tls-set-cert _conf cert -> unspecified_`
+
+=== Procedure: `tls-set-crl _conf crl -> unspecified_`
+
+=== Procedure: `tls-set-key _conf key -> unspecified_`
+
+=== Procedure: `tls-set-keypair _conf cert key -> unspecified_`
+
+=== Procedure: `tls-add-keypair _conf cert key -> unspecified_`
+
+=== Procedure: `tls-clear-keys _conf -> unspecified_`
+
+=== Procedure: `tls-set-verify-depth _conf depth -> unspecified_`
+
+=== Procedure: `tls-verify-client _conf -> unspecified_`
+
+=== Procedure: `tls-verify-client-optional _conf -> unspecified_`
 
 === Procedure: `tls-client _conf -> context_`
 
