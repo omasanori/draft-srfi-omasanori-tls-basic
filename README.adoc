@@ -35,10 +35,9 @@ Historically, TLS libraries have provided a number of functions. However, it
 leads to bloat and misconfiguration, and ultimately, vulnerabilities. An API
 for secure communications should not require programmers a lot of work for
 achieving secure communications. This SRFI is significantly influenced by
-libtls, a TLS library developed by the OpenBSD community "`as a response to the
-unnecessary challenges other APIs present in order to use them safely.`" The
-interfaces, however, provides the room for extensions by future SRFIs and
-implementations.
+libtls developed by the OpenBSD community "`as a response to the unnecessary
+challenges other APIs present in order to use them safely.`" The interfaces,
+however, provides the room for extensions by future SRFIs and implementations.
 
 This SRFI requires a socket API, including but not limited to, SRFI 106. It
 assumes port I/O procedures are provided. It defines feature identifiers and
