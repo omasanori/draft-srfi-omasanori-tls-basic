@@ -46,8 +46,7 @@ version flags for implementations with relevant functionalities.
 
 === Omitted features and interfaces
 
-This SRFI omits various interfaces provided by libtls due to insecurity, lack
-of portability, or uncommon usage.
+This SRFI omits various interfaces provided by libtls.
 
 It omits file-based interfaces because ...
 
