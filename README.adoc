@@ -22,6 +22,7 @@ configurability, while it is intended to cover typical use cases.
 * Specify TLS configuration.
 * Specify TLS context.
 * "`It is an error`" vs. "`signaling an object satisfying the predicate`"
+* Portability of `tls-add-keypair`
 
 == Rationale
 
