@@ -71,11 +71,21 @@ for simplicity. SRFI <tls-insecure> addresses this.
 ??? detailed specification. This should be detailed enough that a conforming
 implementation could be completely created from this description.
 
-=== Common interfaces
+=== Feature flags, predicates and version flags
+
+==== Feature identifier: `tls-client`
+
+==== Feature identifier: `tls-server`
 
 ==== Procedure: `tls-configuration? _object -> boolean_`
 
 ==== Procedure: `tls-context? _object -> boolean_`
+
+==== Version flag: `tls.name`
+
+==== Version flag: `tls.version`
+
+=== Configuration interfaces
 
 ==== Procedure: `tls-configuration _-> conf_`
 
@@ -103,6 +113,8 @@ implementation could be completely created from this description.
 
 ==== Procedure: `tls-set-verify-depth _conf depth -> unspecified_`
 
+=== Context interfaces
+
 ==== Procedure: `tls-handshake _context -> unspecified_`
 
 ==== Procedure: `tls-input-port _context -> port_`
@@ -113,21 +125,13 @@ implementation could be completely created from this description.
 
 ==== Procedure: `tls-reset _context -> unspecified_`
 
-==== Version flag: `tls.name`
-
-==== Version flag: `tls.version`
-
 === Client interfaces
-
-==== Feature identifier: `tls-client`
 
 ==== Procedure: `tls-client _conf -> context_`
 
 ==== Procedure: `tls-connect-socket _context socket servername -> unspecified_`
 
 === Server interfaces
-
-==== Feature identifier: `tls-server`
 
 ==== Procedure: `tls-verify-client _conf -> unspecified_`
 

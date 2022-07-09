@@ -463,7 +463,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#_specification">Specification</a>
 <ul class="sectlevel2">
-<li><a href="#_common_interfaces">Common interfaces</a></li>
+<li><a href="#_feature_flags_predicates_and_version_flags">Feature flags, predicates and version flags</a></li>
+<li><a href="#_configuration_interfaces">Configuration interfaces</a></li>
+<li><a href="#_context_interfaces">Context interfaces</a></li>
 <li><a href="#_client_interfaces">Client interfaces</a></li>
 <li><a href="#_server_interfaces">Server interfaces</a></li>
 </ul>
@@ -576,7 +578,15 @@ for simplicity. SRFI &lt;tls-insecure&gt; addresses this.</p>
 implementation could be completely created from this description.</p>
 </div>
 <div class="sect2">
-<h3 id="_common_interfaces">Common interfaces</h3>
+<h3 id="_feature_flags_predicates_and_version_flags">Feature flags, predicates and version flags</h3>
+<div class="sect3">
+<h4 id="_feature_identifier_tls_client">Feature identifier: <code>tls-client</code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_feature_identifier_tls_server">Feature identifier: <code>tls-server</code></h4>
+
+</div>
 <div class="sect3">
 <h4 id="_procedure_tls_configuration_object_boolean">Procedure: <code>tls-configuration? <em>object &#8594; boolean</em></code></h4>
 
@@ -585,6 +595,17 @@ implementation could be completely created from this description.</p>
 <h4 id="_procedure_tls_context_object_boolean">Procedure: <code>tls-context? <em>object &#8594; boolean</em></code></h4>
 
 </div>
+<div class="sect3">
+<h4 id="_version_flag_tls_name">Version flag: <code>tls.name</code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_version_flag_tls_version">Version flag: <code>tls.version</code></h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_interfaces">Configuration interfaces</h3>
 <div class="sect3">
 <h4 id="_procedure_tls_configuration_conf">Procedure: <code>tls-configuration <em>&#8594; conf</em></code></h4>
 
@@ -637,6 +658,9 @@ implementation could be completely created from this description.</p>
 <h4 id="_procedure_tls_set_verify_depth_conf_depth_unspecified">Procedure: <code>tls-set-verify-depth <em>conf depth &#8594; unspecified</em></code></h4>
 
 </div>
+</div>
+<div class="sect2">
+<h3 id="_context_interfaces">Context interfaces</h3>
 <div class="sect3">
 <h4 id="_procedure_tls_handshake_context_unspecified">Procedure: <code>tls-handshake <em>context &#8594; unspecified</em></code></h4>
 
@@ -657,21 +681,9 @@ implementation could be completely created from this description.</p>
 <h4 id="_procedure_tls_reset_context_unspecified">Procedure: <code>tls-reset <em>context &#8594; unspecified</em></code></h4>
 
 </div>
-<div class="sect3">
-<h4 id="_version_flag_tls_name">Version flag: <code>tls.name</code></h4>
-
-</div>
-<div class="sect3">
-<h4 id="_version_flag_tls_version">Version flag: <code>tls.version</code></h4>
-
-</div>
 </div>
 <div class="sect2">
 <h3 id="_client_interfaces">Client interfaces</h3>
-<div class="sect3">
-<h4 id="_feature_identifier_tls_client">Feature identifier: <code>tls-client</code></h4>
-
-</div>
 <div class="sect3">
 <h4 id="_procedure_tls_client_conf_context">Procedure: <code>tls-client <em>conf &#8594; context</em></code></h4>
 
@@ -683,10 +695,6 @@ implementation could be completely created from this description.</p>
 </div>
 <div class="sect2">
 <h3 id="_server_interfaces">Server interfaces</h3>
-<div class="sect3">
-<h4 id="_feature_identifier_tls_server">Feature identifier: <code>tls-server</code></h4>
-
-</div>
 <div class="sect3">
 <h4 id="_procedure_tls_verify_client_conf_unspecified">Procedure: <code>tls-verify-client <em>conf &#8594; unspecified</em></code></h4>
 
@@ -797,7 +805,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-09 11:57:35 +0900
+Last updated 2022-07-09 12:02:19 +0900
 </div>
 </div>
 </body>
