@@ -516,20 +516,21 @@ configurability, while it is intended to cover typical use cases.</p>
 <p>As described in RFC 7258, large-scale surveillance is recognized as a privacy
 threat nowadays, and the design of internet protocols has been shifting toward
 encrypted-by-default, using TLS or similar protocols. Thus, a portable API for
-TLS benefits programmers writing networking code.</p>
+TLS benefits programmers in writing networking code.</p>
 </div>
 <div class="paragraph">
-<p>Historically, TLS libraries have provided a number of functions. However, it
-leads to bloat and misconfiguration, and ultimately, vulnerabilities. An API
-for secure communications should not require programmers a lot of work for
-achieving secure communications. This SRFI is significantly influenced by
-libtls, a TLS library developed by the OpenBSD community &#8220;as a response to the
-unnecessary challenges other APIs present in order to use them safely.&#8221; The
-interfaces, however, provide the room for extensions by future SRFIs and
-implementations.</p>
+<p>Historically, TLS libraries have provided many functions. However, it leads to
+bloat and misconfiguration and, ultimately, vulnerabilities. An API for secure
+communications should not require programmers a lot of work to achieve secure
+communications. This SRFI is significantly influenced by libtls, a TLS library
+developed by the OpenBSD community “as a response to the unnecessary
+challenges other APIs present in order to use them safely.” Furthermore, this
+SRFI reduces the number of interfaces to provide essential functionalities
+while supporting various implementations. The interfaces, however, provide room
+for extensions by future SRFIs and implementations.</p>
 </div>
 <div class="paragraph">
-<p>This SRFI requires a socket API, including but not limited to, SRFI 106. It
+<p>This SRFI requires a socket API, including but not limited to SRFI 106. It
 assumes port I/O procedures are provided. It defines feature identifiers and
 version flags for implementations with relevant functionalities.</p>
 </div>
@@ -775,7 +776,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-08 19:23:35 +0900
+Last updated 2022-07-09 10:02:11 +0900
 </div>
 </div>
 </body>

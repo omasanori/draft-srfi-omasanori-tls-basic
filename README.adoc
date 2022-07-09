@@ -29,18 +29,19 @@ configurability, while it is intended to cover typical use cases.
 As described in RFC 7258, large-scale surveillance is recognized as a privacy
 threat nowadays, and the design of internet protocols has been shifting toward
 encrypted-by-default, using TLS or similar protocols. Thus, a portable API for
-TLS benefits programmers writing networking code.
+TLS benefits programmers in writing networking code.
 
-Historically, TLS libraries have provided a number of functions. However, it
-leads to bloat and misconfiguration, and ultimately, vulnerabilities. An API
-for secure communications should not require programmers a lot of work for
-achieving secure communications. This SRFI is significantly influenced by
-libtls, a TLS library developed by the OpenBSD community "`as a response to the
-unnecessary challenges other APIs present in order to use them safely.`" The
-interfaces, however, provide the room for extensions by future SRFIs and
-implementations.
+Historically, TLS libraries have provided many functions. However, it leads to
+bloat and misconfiguration and, ultimately, vulnerabilities. An API for secure
+communications should not require programmers a lot of work to achieve secure
+communications. This SRFI is significantly influenced by libtls, a TLS library
+developed by the OpenBSD community "`as a response to the unnecessary
+challenges other APIs present in order to use them safely.`" Furthermore, this
+SRFI reduces the number of interfaces to provide essential functionalities
+while supporting various implementations. The interfaces, however, provide room
+for extensions by future SRFIs and implementations.
 
-This SRFI requires a socket API, including but not limited to, SRFI 106. It
+This SRFI requires a socket API, including but not limited to SRFI 106. It
 assumes port I/O procedures are provided. It defines feature identifiers and
 version flags for implementations with relevant functionalities.
 
