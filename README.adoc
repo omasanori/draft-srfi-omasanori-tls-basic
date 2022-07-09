@@ -1,4 +1,4 @@
-= SRFI nnn: Basic TLS connection
+= SRFI nnn: Basic TLS connections
 Masanori Ogino
 :toc: macro
 
