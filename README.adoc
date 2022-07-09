@@ -19,10 +19,8 @@ typical use cases.
 
 == Issues
 
-* Specify TLS configuration.
-* Specify TLS context.
-* "`It is an error`" vs. "`signaling an object satisfying the predicate`"
-* Portability of `tls-add-keypair`
+* Complete the specification
+* Check the portability of `tls-add-keypair`
 
 == Rationale
 
@@ -63,8 +61,15 @@ for simplicity. SRFI <tls-insecure> addresses this.
 
 == Specification
 
-??? detailed specification. This should be detailed enough that a conforming
-implementation could be completely created from this description.
+This specification uses the words and phrases "`an error is signaled,`"
+"`an error that satisfies _predicate_ is signaled,`" "`an error,`"
+"`may report a violation of an implementation restriction,`" "`unspecified,`"
+"`must,`" "`must not,`" "`shall,`" "`shall not,`" "`should,`" "`should not,`"
+"`may,`" "`required,`" "`recommended,`" and "`optional`" as described in R7RS,
+section 1.3.2.
+
+An implementation must provide the configuration, context, and client or server
+interfaces. An implementation may provide both the server and client interfaces.
 
 === Feature identifiers and version flags
 
