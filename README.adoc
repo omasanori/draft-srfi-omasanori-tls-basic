@@ -48,18 +48,13 @@ version flags for implementations with relevant functionalities.
 === Omitted features and interfaces
 
 This SRFI omits file- and path-based interfaces to support implementations for
-embedded systems. SRFI <tls-advanced> addresses this.
-
-It omits the ability to specify detailed parameters like cipher suites as it is
-too specific and can be easily misused. SRFI <tls-advanced> addresses this.
-
-It omits inspection of established connections like retrieving the negotiated
-protocol version and cipher suites for simplicity. SRFI <tls-advanced>
-addresses this.
-
-It omits Application-Layer Protocol Negotiation (ALPN) and Online Certificate
-Status Protocol (OCSP) interfaces because they depend on the inspection of
-established connections. SRFI <tls-advanced> addresses this.
+embedded systems. It omits the ability to specify detailed parameters like
+cipher suites as it is too specific and can be easily misused. It omits
+inspection of established connections like retrieving the negotiated protocol
+version and cipher suite for simplicity. It omits Application-Layer Protocol
+Negotiation (ALPN) and Online Certificate Status Protocol (OCSP) supports
+since they depend on inspection of established connections. SRFI <tls-advanced>
+addresses them.
 
 It omits configuration for insecure connections, like enabling obsolete
 protocol versions and weak cipher suites or disabling certificate validations.
