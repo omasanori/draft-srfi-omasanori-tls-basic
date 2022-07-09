@@ -14,8 +14,8 @@ toc::[]
 
 This SRFI specifies a set of interfaces to establish secure connections to
 peers and communicate with them using the Transport Layer Security (TLS)
-protocol. It focuses on simplicity and ease to use over flexibility and
-configurability, while it is intended to cover typical use cases.
+protocol. It focuses on simplicity over flexibility and is intended to cover
+typical use cases.
 
 == Issues
 
