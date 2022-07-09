@@ -502,9 +502,6 @@ configurability, while it is intended to cover typical use cases.</p>
 <li>
 <p>&#8220;It is an error&#8221; vs. &#8220;signaling an object satisfying the predicate&#8221;</p>
 </li>
-<li>
-<p>Reconsider ALPN and OCSP support.</p>
-</li>
 </ul>
 </div>
 </div>
@@ -537,22 +534,28 @@ version flags for implementations with relevant functionalities.</p>
 <div class="sect2">
 <h3 id="_omitted_features_and_interfaces">Omitted features and interfaces</h3>
 <div class="paragraph">
-<p>This SRFI omits various interfaces provided by libtls.</p>
+<p>This SRFI omits file- and path-based interfaces to support implementations for
+embedded systems. SRFI &lt;tls-advanced&gt; addresses this.</p>
 </div>
 <div class="paragraph">
-<p>It omits file-based interfaces because &#8230;&#8203;</p>
+<p>It omits the ability to specify detailed parameters like cipher suites as it is
+too specific and can be easily misused. SRFI &lt;tls-advanced&gt; addresses this.</p>
 </div>
 <div class="paragraph">
-<p>It omits configuration for insecure connections because &#8230;&#8203;</p>
+<p>It omits inspection of established connections like retrieving the negotiated
+protocol version and cipher suites for simplicity. SRFI &lt;tls-advanced&gt;
+addresses this.</p>
 </div>
 <div class="paragraph">
-<p>It omits inspection of established connections because &#8230;&#8203;</p>
+<p>It omits Application-Layer Protocol Negotiation (ALPN) and Online Certificate
+Status Protocol (OCSP) interfaces because they depend on the inspection of
+established connections. SRFI &lt;tls-advanced&gt; addresses this.</p>
 </div>
 <div class="paragraph">
-<p>It omits Application-Layer Protocol Negotiation (ALPN) because &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>It omits Online Certificate Status Protocol (OCSP) because &#8230;&#8203;</p>
+<p>It omits configuration for insecure connections, like enabling obsolete
+protocol versions and weak cipher suites or disabling certificate validations.
+While we know some use cases, we drop these functionalities from the interfaces
+for simplicity. SRFI &lt;tls-insecure&gt; addresses this.</p>
 </div>
 </div>
 </div>
@@ -776,7 +779,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-09 10:05:03 +0900
+Last updated 2022-07-09 10:49:04 +0900
 </div>
 </div>
 </body>

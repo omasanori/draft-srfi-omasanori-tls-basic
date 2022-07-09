@@ -22,7 +22,6 @@ configurability, while it is intended to cover typical use cases.
 * Specify TLS configuration.
 * Specify TLS context.
 * "`It is an error`" vs. "`signaling an object satisfying the predicate`"
-* Reconsider ALPN and OCSP support.
 
 == Rationale
 
@@ -47,17 +46,24 @@ version flags for implementations with relevant functionalities.
 
 === Omitted features and interfaces
 
-This SRFI omits various interfaces provided by libtls.
+This SRFI omits file- and path-based interfaces to support implementations for
+embedded systems. SRFI <tls-advanced> addresses this.
 
-It omits file-based interfaces because ...
+It omits the ability to specify detailed parameters like cipher suites as it is
+too specific and can be easily misused. SRFI <tls-advanced> addresses this.
 
-It omits configuration for insecure connections because ...
+It omits inspection of established connections like retrieving the negotiated
+protocol version and cipher suites for simplicity. SRFI <tls-advanced>
+addresses this.
 
-It omits inspection of established connections because ...
+It omits Application-Layer Protocol Negotiation (ALPN) and Online Certificate
+Status Protocol (OCSP) interfaces because they depend on the inspection of
+established connections. SRFI <tls-advanced> addresses this.
 
-It omits Application-Layer Protocol Negotiation (ALPN) because ...
-
-It omits Online Certificate Status Protocol (OCSP) because ...
+It omits configuration for insecure connections, like enabling obsolete
+protocol versions and weak cipher suites or disabling certificate validations.
+While we know some use cases, we drop these functionalities from the interfaces
+for simplicity. SRFI <tls-insecure> addresses this.
 
 == Specification
 
