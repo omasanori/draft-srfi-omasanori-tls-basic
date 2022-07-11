@@ -503,6 +503,9 @@ cases.</p>
 <li>
 <p>Complete the specification</p>
 </li>
+<li>
+<p>Rethink whether a socket API is mandatory or not</p>
+</li>
 </ul>
 </div>
 </div>
@@ -528,9 +531,9 @@ while supporting various implementations. The interfaces, however, provide room
 for extensions by future SRFIs and implementations.</p>
 </div>
 <div class="paragraph">
-<p>This SRFI requires a port I/O API. It optinally depends on a socket API that
-may conform to SRFI 106. It defines feature identifiers (see SRFI 0) and
-version flags (see SRFI 176).</p>
+<p>This SRFI requires a port I/O API and a socket API that may or may not conform
+to SRFI  106. It defines feature identifiers (see SRFI 0) and version flags
+(see SRFI 176).</p>
 </div>
 <div class="paragraph">
 <p>This SRFI omits file- and path-based interfaces to support embedded systems. It
@@ -578,12 +581,6 @@ flags.</p>
 <h4 id="_feature_identifier_tls_server">Feature identifier: <code>tls-server</code></h4>
 <div class="paragraph">
 <p>Server interfaces are provided.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_feature_identifier_tls_socket">Feature identifier: <code>tls-socket</code></h4>
-<div class="paragraph">
-<p><code>tls-connect-socket</code>, <code>tls-accept-socket</code>, or both of them are provided.</p>
 </div>
 </div>
 <div class="sect3">
@@ -682,14 +679,6 @@ this specification.</p>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_connect_context_host_service_unspecified">Procedure: <code>(tls-connect <em>context host service</em>) &#8594; <em>unspecified</em></code></h4>
-
-</div>
-<div class="sect3">
-<h4 id="_procedure_tls_connect_servername_context_host_service_servername_unspecified">Procedure: <code>(tls-connect-servername <em>context host service servername</em>) &#8594; <em>unspecified</em></code></h4>
-
-</div>
-<div class="sect3">
 <h4 id="_procedure_tls_connect_socket_context_socket_servername_unspecified">Procedure: <code>(tls-connect-socket <em>context socket servername</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
@@ -710,10 +699,6 @@ this specification.</p>
 </div>
 <div class="sect3">
 <h4 id="_procedure_tls_server_conf_context">Procedure: <code>(tls-server <em>conf</em>) &#8594; <em>context</em></code></h4>
-
-</div>
-<div class="sect3">
-<h4 id="_procedure_tls_accept_context_service_context">Procedure: <code>(tls-accept <em>context service</em>) &#8594; <em>context</em></code></h4>
 
 </div>
 <div class="sect3">
@@ -867,7 +852,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-11 14:12:46 +0900
+Last updated 2022-07-11 14:19:37 +0900
 </div>
 </div>
 </body>

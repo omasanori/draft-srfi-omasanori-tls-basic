@@ -20,6 +20,7 @@ cases.
 == Issues
 
 * Complete the specification
+* Rethink whether a socket API is mandatory or not
 
 == Rationale
 
@@ -38,9 +39,9 @@ SRFI reduces the number of interfaces to provide essential functionalities
 while supporting various implementations. The interfaces, however, provide room
 for extensions by future SRFIs and implementations.
 
-This SRFI requires a port I/O API. It optinally depends on a socket API that
-may conform to SRFI 106. It defines feature identifiers (see SRFI 0) and
-version flags (see SRFI 176).
+This SRFI requires a port I/O API and a socket API that may or may not conform
+to SRFI  106. It defines feature identifiers (see SRFI 0) and version flags
+(see SRFI 176).
 
 This SRFI omits file- and path-based interfaces to support embedded systems. It
 omits the ability to specify detailed parameters as it can be easily misused.
@@ -76,10 +77,6 @@ Client interfaces are provided.
 ==== Feature identifier: `tls-server`
 
 Server interfaces are provided.
-
-==== Feature identifier: `tls-socket`
-
-`tls-connect-socket`, `tls-accept-socket`, or both of them are provided.
 
 ==== Version flag: `(tls.name _string_)`
 
@@ -133,10 +130,6 @@ this specification.
 
 ==== Procedure: `(tls-client _conf_) -> _context_`
 
-==== Procedure: `(tls-connect _context host service_) -> _unspecified_`
-
-==== Procedure: `(tls-connect-servername _context host service servername_) -> _unspecified_`
-
 ==== Procedure: `(tls-connect-socket _context socket servername_) -> _unspecified_`
 
 === Server interfaces
@@ -148,8 +141,6 @@ this specification.
 ==== Procedure: `(tls-verify-client-optional _conf_) -> _unspecified_`
 
 ==== Procedure: `(tls-server _conf_) -> _context_`
-
-==== Procedure: `(tls-accept _context service_) -> _context_`
 
 ==== Procedure: `(tls-accept-socket _context socket_) -> _context_`
 
