@@ -90,12 +90,12 @@ Server interfaces are provided.
 
 `tls-connect-socket`, `tls-accept-socket`, or both of them are provided.
 
-==== Version flag: `tls.name string`
+==== Version flag: `(tls.name _string_)`
 
 The name of underlying TLS implementation to implement interfaces defined by
 this specification.
 
-==== Version flag: `tls.version string`
+==== Version flag: `(tls.version _string_)`
 
 The version of underlying TLS implementation to implement interfaces defined by
 this specification.
