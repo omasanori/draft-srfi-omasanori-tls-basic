@@ -503,9 +503,6 @@ cases.</p>
 <li>
 <p>Complete the specification</p>
 </li>
-<li>
-<p>Revisit private key problems (buffered I/O, password, wipe data after use)</p>
-</li>
 </ul>
 </div>
 </div>
@@ -612,120 +609,120 @@ this specification.</p>
 <div class="sect2">
 <h3 id="_configuration_interfaces">Configuration interfaces</h3>
 <div class="sect3">
-<h4 id="_procedure_tls_configuration_object_boolean">Procedure: <code>tls-configuration? <em>object &#8594; boolean</em></code></h4>
+<h4 id="_procedure_tls_configuration_object_boolean">Procedure: <code>(tls-configuration? <em>object</em>) &#8594; <em>boolean</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_configuration_conf">Procedure: <code>tls-configuration <em>&#8594; conf</em></code></h4>
+<h4 id="_procedure_tls_configuration_conf">Procedure: <code>(tls-configuration) &#8594; <em>conf</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_protocols_conf_protocol_unspecified">Procedure: <code>tls-set-protocols <em>conf protocol &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_protocols_conf_protocol_unspecified">Procedure: <code>(tls-set-protocols <em>conf protocol</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_ciphers_conf_cipher_unspecified">Procedure: <code>tls-set-ciphers <em>conf cipher &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_ciphers_conf_cipher_unspecified">Procedure: <code>(tls-set-ciphers <em>conf cipher</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_ca_conf_port_unspecified">Procedure: <code>tls-set-ca <em>conf port &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_ca_conf_port_unspecified">Procedure: <code>(tls-set-ca <em>conf port</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_cert_conf_port_unspecified">Procedure: <code>tls-set-cert <em>conf port &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_cert_conf_port_unspecified">Procedure: <code>(tls-set-cert <em>conf port</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_crl_conf_port_unspecified">Procedure: <code>tls-set-crl <em>conf port &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_crl_conf_port_unspecified">Procedure: <code>(tls-set-crl <em>conf port</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_key_conf_port_unspecified">Procedure: <code>tls-set-key <em>conf port &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_key_conf_port_unspecified">Procedure: <code>(tls-set-key <em>conf port</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_keypair_conf_cert_port_key_port_unspecified">Procedure: <code>tls-set-keypair <em>conf cert-port key-port &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_keypair_conf_cert_port_key_port_unspecified">Procedure: <code>(tls-set-keypair <em>conf cert-port key-port</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_clear_keys_conf_unspecified">Procedure: <code>tls-clear-keys <em>conf &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_clear_keys_conf_unspecified">Procedure: <code>(tls-clear-keys <em>conf</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_verify_depth_conf_depth_unspecified">Procedure: <code>tls-set-verify-depth <em>conf depth &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_verify_depth_conf_depth_unspecified">Procedure: <code>(tls-set-verify-depth <em>conf depth</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 </div>
 <div class="sect2">
 <h3 id="_context_interfaces">Context interfaces</h3>
 <div class="sect3">
-<h4 id="_procedure_tls_context_object_boolean">Procedure: <code>tls-context? <em>object &#8594; boolean</em></code></h4>
+<h4 id="_procedure_tls_context_object_boolean">Procedure: <code>(tls-context? <em>object</em>) &#8594; <em>boolean</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_handshake_context_unspecified">Procedure: <code>tls-handshake <em>context &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_handshake_context_unspecified">Procedure: <code>(tls-handshake <em>context</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_input_port_context_port">Procedure: <code>tls-input-port <em>context &#8594; port</em></code></h4>
+<h4 id="_procedure_tls_input_port_context_port">Procedure: <code>(tls-input-port <em>context</em>) &#8594; <em>port</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_output_port_context_port">Procedure: <code>tls-output-port <em>context &#8594; port</em></code></h4>
+<h4 id="_procedure_tls_output_port_context_port">Procedure: <code>(tls-output-port <em>context</em>) &#8594; <em>port</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_close_context_unspecified">Procedure: <code>tls-close <em>context &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_close_context_unspecified">Procedure: <code>(tls-close <em>context</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_reset_context_unspecified">Procedure: <code>tls-reset <em>context &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_reset_context_unspecified">Procedure: <code>(tls-reset <em>context</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 </div>
 <div class="sect2">
 <h3 id="_client_interfaces">Client interfaces</h3>
 <div class="sect3">
-<h4 id="_procedure_tls_client_conf_context">Procedure: <code>tls-client <em>conf &#8594; context</em></code></h4>
+<h4 id="_procedure_tls_client_conf_context">Procedure: <code>(tls-client <em>conf</em>) &#8594; <em>context</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_connect_context_host_service_unspecified">Procedure: <code>tls-connect <em>context host service &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_connect_context_host_service_unspecified">Procedure: <code>(tls-connect <em>context host service</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_connect_servername_context_host_service_servername_unspecified">Procedure: <code>tls-connect-servername <em>context host service servername &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_connect_servername_context_host_service_servername_unspecified">Procedure: <code>(tls-connect-servername <em>context host service servername</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_connect_socket_context_socket_servername_unspecified">Procedure: <code>tls-connect-socket <em>context socket servername &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_connect_socket_context_socket_servername_unspecified">Procedure: <code>(tls-connect-socket <em>context socket servername</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 </div>
 <div class="sect2">
 <h3 id="_server_interfaces">Server interfaces</h3>
 <div class="sect3">
-<h4 id="_procedure_tls_add_keypair_conf_cert_port_key_port_unspecified">Procedure: <code>tls-add-keypair <em>conf cert-port key-port &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_add_keypair_conf_cert_port_key_port_unspecified">Procedure: <code>(tls-add-keypair <em>conf cert-port key-port</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_verify_client_conf_unspecified">Procedure: <code>tls-verify-client <em>conf &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_verify_client_conf_unspecified">Procedure: <code>(tls-verify-client <em>conf</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_verify_client_optional_conf_unspecified">Procedure: <code>tls-verify-client-optional <em>conf &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_verify_client_optional_conf_unspecified">Procedure: <code>(tls-verify-client-optional <em>conf</em>) &#8594; <em>unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_server_conf_context">Procedure: <code>tls-server <em>conf &#8594; context</em></code></h4>
+<h4 id="_procedure_tls_server_conf_context">Procedure: <code>(tls-server <em>conf</em>) &#8594; <em>context</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_accept_context_service_context">Procedure: <code>tls-accept <em>context service &#8594; context</em></code></h4>
+<h4 id="_procedure_tls_accept_context_service_context">Procedure: <code>(tls-accept <em>context service</em>) &#8594; <em>context</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_accept_socket_context_socket_context">Procedure: <code>tls-accept-socket <em>context socket &#8594; context</em></code></h4>
+<h4 id="_procedure_tls_accept_socket_context_socket_context">Procedure: <code>(tls-accept-socket <em>context socket</em>) &#8594; <em>context</em></code></h4>
 
 </div>
 </div>
@@ -875,7 +872,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-11 13:42:32 +0900
+Last updated 2022-07-11 13:49:57 +0900
 </div>
 </div>
 </body>

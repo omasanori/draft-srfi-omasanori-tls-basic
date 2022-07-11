@@ -97,65 +97,65 @@ this specification.
 
 === Configuration interfaces
 
-==== Procedure: `tls-configuration? _object -> boolean_`
+==== Procedure: `(tls-configuration? _object_) -> _boolean_`
 
-==== Procedure: `tls-configuration _-> conf_`
+==== Procedure: `(tls-configuration) -> _conf_`
 
-==== Procedure: `tls-set-protocols _conf protocol -> unspecified_`
+==== Procedure: `(tls-set-protocols _conf protocol_) -> _unspecified_`
 
-==== Procedure: `tls-set-ciphers _conf cipher -> unspecified_`
+==== Procedure: `(tls-set-ciphers _conf cipher_) -> _unspecified_`
 
-==== Procedure: `tls-set-ca _conf port -> unspecified_`
+==== Procedure: `(tls-set-ca _conf port_) -> _unspecified_`
 
-==== Procedure: `tls-set-cert _conf port -> unspecified_`
+==== Procedure: `(tls-set-cert _conf port_) -> _unspecified_`
 
-==== Procedure: `tls-set-crl _conf port -> unspecified_`
+==== Procedure: `(tls-set-crl _conf port_) -> _unspecified_`
 
-==== Procedure: `tls-set-key _conf port -> unspecified_`
+==== Procedure: `(tls-set-key _conf port_) -> _unspecified_`
 
-==== Procedure: `tls-set-keypair _conf cert-port key-port -> unspecified_`
+==== Procedure: `(tls-set-keypair _conf cert-port key-port_) -> _unspecified_`
 
-==== Procedure: `tls-clear-keys _conf -> unspecified_`
+==== Procedure: `(tls-clear-keys _conf_) -> _unspecified_`
 
-==== Procedure: `tls-set-verify-depth _conf depth -> unspecified_`
+==== Procedure: `(tls-set-verify-depth _conf depth_) -> _unspecified_`
 
 === Context interfaces
 
-==== Procedure: `tls-context? _object -> boolean_`
+==== Procedure: `(tls-context? _object_) -> _boolean_`
 
-==== Procedure: `tls-handshake _context -> unspecified_`
+==== Procedure: `(tls-handshake _context_) -> _unspecified_`
 
-==== Procedure: `tls-input-port _context -> port_`
+==== Procedure: `(tls-input-port _context_) -> _port_`
 
-==== Procedure: `tls-output-port _context -> port_`
+==== Procedure: `(tls-output-port _context_) -> _port_`
 
-==== Procedure: `tls-close _context -> unspecified_`
+==== Procedure: `(tls-close _context_) -> _unspecified_`
 
-==== Procedure: `tls-reset _context -> unspecified_`
+==== Procedure: `(tls-reset _context_) -> _unspecified_`
 
 === Client interfaces
 
-==== Procedure: `tls-client _conf -> context_`
+==== Procedure: `(tls-client _conf_) -> _context_`
 
-==== Procedure: `tls-connect _context host service -> unspecified_`
+==== Procedure: `(tls-connect _context host service_) -> _unspecified_`
 
-==== Procedure: `tls-connect-servername _context host service servername -> unspecified_`
+==== Procedure: `(tls-connect-servername _context host service servername_) -> _unspecified_`
 
-==== Procedure: `tls-connect-socket _context socket servername -> unspecified_`
+==== Procedure: `(tls-connect-socket _context socket servername_) -> _unspecified_`
 
 === Server interfaces
 
-==== Procedure: `tls-add-keypair _conf cert-port key-port -> unspecified_`
+==== Procedure: `(tls-add-keypair _conf cert-port key-port_) -> _unspecified_`
 
-==== Procedure: `tls-verify-client _conf -> unspecified_`
+==== Procedure: `(tls-verify-client _conf_) -> _unspecified_`
 
-==== Procedure: `tls-verify-client-optional _conf -> unspecified_`
+==== Procedure: `(tls-verify-client-optional _conf_) -> _unspecified_`
 
-==== Procedure: `tls-server _conf -> context_`
+==== Procedure: `(tls-server _conf_) -> _context_`
 
-==== Procedure: `tls-accept _context service -> context_`
+==== Procedure: `(tls-accept _context service_) -> _context_`
 
-==== Procedure: `tls-accept-socket _context socket -> context_`
+==== Procedure: `(tls-accept-socket _context socket_) -> _context_`
 
 == Examples
 
