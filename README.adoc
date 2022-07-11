@@ -146,7 +146,7 @@ this specification.
 
 ==== Procedure: `tls-connect _context host service -> unspecified_`
 
-==== Procedure: `tls-connect-with-servername _context host service servername -> unspecified_`
+==== Procedure: `tls-connect-servername _context host service servername -> unspecified_`
 
 ==== Procedure: `tls-connect-socket _context socket servername -> unspecified_`
 
