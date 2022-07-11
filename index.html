@@ -456,11 +456,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel1">
 <li><a href="#_abstract">Abstract</a></li>
 <li><a href="#_issues">Issues</a></li>
-<li><a href="#_rationale">Rationale</a>
-<ul class="sectlevel2">
-<li><a href="#_survey_of_prior_art">Survey of prior art</a></li>
-</ul>
-</li>
+<li><a href="#_rationale">Rationale</a></li>
 <li><a href="#_specification">Specification</a>
 <ul class="sectlevel2">
 <li><a href="#_feature_identifiers_and_version_flags">Feature identifiers and version flags</a></li>
@@ -588,25 +584,8 @@ for extensions by future SRFIs and implementations.</p>
 </div>
 <div class="paragraph">
 <p>This SRFI requires a port I/O API and a socket API that may or may not conform
-to SRFI  106. It defines feature identifiers (see SRFI 0) and version flags
-(see SRFI 176).</p>
-</div>
-<div class="paragraph">
-<p>This SRFI omits file- and path-based interfaces to support embedded systems. It
-omits the ability to specify detailed parameters as it can be easily misused.
-It omits inspection of established connections for simplicity. It omits
-Application-Layer Protocol Negotiation (ALPN) and Online Certificate Status
-Protocol (OCSP) since they depend on inspection of established connections.
-SRFI &lt;tls-advanced&gt; addresses them.</p>
-</div>
-<div class="paragraph">
-<p>It omits configuration for insecure connections, like enabling obsolete
-protocol versions and weak cipher suites or disabling certificate validations.
-SRFI &lt;tls-insecure&gt; addresses this.</p>
-</div>
-<div class="sect2">
-<h3 id="_survey_of_prior_art">Survey of prior art</h3>
-
+to SRFI 106. It defines feature identifiers (see SRFI 0) and version flags
+(see SRFI 176). It is extended by SRFI &lt;tls-advanced&gt; and SRFI &lt;tls-insecure&gt;.</p>
 </div>
 </div>
 </div>
@@ -853,7 +832,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-11 14:34:19 +0900
+Last updated 2022-07-11 20:40:43 +0900
 </div>
 </div>
 </body>

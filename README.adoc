@@ -60,21 +60,8 @@ while supporting various implementations. The interfaces, however, provide room
 for extensions by future SRFIs and implementations.
 
 This SRFI requires a port I/O API and a socket API that may or may not conform
-to SRFI  106. It defines feature identifiers (see SRFI 0) and version flags
-(see SRFI 176).
-
-This SRFI omits file- and path-based interfaces to support embedded systems. It
-omits the ability to specify detailed parameters as it can be easily misused.
-It omits inspection of established connections for simplicity. It omits
-Application-Layer Protocol Negotiation (ALPN) and Online Certificate Status
-Protocol (OCSP) since they depend on inspection of established connections.
-SRFI <tls-advanced> addresses them.
-
-It omits configuration for insecure connections, like enabling obsolete
-protocol versions and weak cipher suites or disabling certificate validations.
-SRFI <tls-insecure> addresses this.
-
-=== Survey of prior art
+to SRFI 106. It defines feature identifiers (see SRFI 0) and version flags
+(see SRFI 176). It is extended by SRFI <tls-advanced> and SRFI <tls-insecure>.
 
 == Specification
 
