@@ -21,6 +21,26 @@ cases.
 
 * Complete the specification
 * Rethink whether a socket API is mandatory or not
+* Write sample implementations
+
+At least, this SRFI should be able to implement with the following libraries:
+
+* GnuTLS: widely used, used by Guile
+* Mbed TLS: designed for embedded systems, used by Gauche
+* OpenSSL: widely used, used by Chibi and Chicken
+* A TLS implementation on Java VM (`javax.net.ssl` or Bouncy Castle?)
+* A TLS implementation on .NET (`System.Net.Security` or Bouncy Castle?)
+
+Additionally, the following libraries may be taken into account:
+
+* Amazon s2n-tls
+* Apple Secure Transport
+* axTLS (no commit to the repository since 2019, safe to drop?)
+* BearSSL
+* Microsoft Secure Channel
+* miTLS by Project Everest
+* Mozilla Network Security Services
+* wolfSSL
 
 == Rationale
 
@@ -148,25 +168,6 @@ The version of underlying TLS implementation.
 
 ??? explanation of how it meets the sample implementation requirement (see
 process), and the code, if possible, or a link to it.
-
-At least, this SRFI should be able to implement with the following libraries:
-
-* GnuTLS: widely used, used by Guile
-* Mbed TLS: designed for embedded systems, used by Gauche
-* OpenSSL: widely used, used by Chibi and Chicken
-* A TLS implementation on Java VM (`javax.net.ssl` or Bouncy Castle?)
-* A TLS implementation on .NET (`System.Net.Security` or Bouncy Castle?)
-
-Additionally, the following libraries may be taken into account:
-
-* Amazon s2n-tls
-* Apple Secure Transport
-* axTLS (no commit to the repository since 2019, safe to drop?)
-* BearSSL
-* Microsoft Secure Channel
-* miTLS by Project Everest
-* Mozilla Network Security Services
-* wolfSSL
 
 == Acknowledgements
 

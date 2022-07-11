@@ -506,6 +506,62 @@ cases.</p>
 <li>
 <p>Rethink whether a socket API is mandatory or not</p>
 </li>
+<li>
+<p>Write sample implementations</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>At least, this SRFI should be able to implement with the following libraries:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>GnuTLS: widely used, used by Guile</p>
+</li>
+<li>
+<p>Mbed TLS: designed for embedded systems, used by Gauche</p>
+</li>
+<li>
+<p>OpenSSL: widely used, used by Chibi and Chicken</p>
+</li>
+<li>
+<p>A TLS implementation on Java VM (<code>javax.net.ssl</code> or Bouncy Castle?)</p>
+</li>
+<li>
+<p>A TLS implementation on .NET (<code>System.Net.Security</code> or Bouncy Castle?)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Additionally, the following libraries may be taken into account:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Amazon s2n-tls</p>
+</li>
+<li>
+<p>Apple Secure Transport</p>
+</li>
+<li>
+<p>axTLS (no commit to the repository since 2019, safe to drop?)</p>
+</li>
+<li>
+<p>BearSSL</p>
+</li>
+<li>
+<p>Microsoft Secure Channel</p>
+</li>
+<li>
+<p>miTLS by Project Everest</p>
+</li>
+<li>
+<p>Mozilla Network Security Services</p>
+</li>
+<li>
+<p>wolfSSL</p>
+</li>
 </ul>
 </div>
 </div>
@@ -719,59 +775,6 @@ flags.</p>
 <p>??? explanation of how it meets the sample implementation requirement (see
 process), and the code, if possible, or a link to it.</p>
 </div>
-<div class="paragraph">
-<p>At least, this SRFI should be able to implement with the following libraries:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>GnuTLS: widely used, used by Guile</p>
-</li>
-<li>
-<p>Mbed TLS: designed for embedded systems, used by Gauche</p>
-</li>
-<li>
-<p>OpenSSL: widely used, used by Chibi and Chicken</p>
-</li>
-<li>
-<p>A TLS implementation on Java VM (<code>javax.net.ssl</code> or Bouncy Castle?)</p>
-</li>
-<li>
-<p>A TLS implementation on .NET (<code>System.Net.Security</code> or Bouncy Castle?)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Additionally, the following libraries may be taken into account:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Amazon s2n-tls</p>
-</li>
-<li>
-<p>Apple Secure Transport</p>
-</li>
-<li>
-<p>axTLS (no commit to the repository since 2019, safe to drop?)</p>
-</li>
-<li>
-<p>BearSSL</p>
-</li>
-<li>
-<p>Microsoft Secure Channel</p>
-</li>
-<li>
-<p>miTLS by Project Everest</p>
-</li>
-<li>
-<p>Mozilla Network Security Services</p>
-</li>
-<li>
-<p>wolfSSL</p>
-</li>
-</ul>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -850,7 +853,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-11 14:31:51 +0900
+Last updated 2022-07-11 14:34:19 +0900
 </div>
 </div>
 </body>
