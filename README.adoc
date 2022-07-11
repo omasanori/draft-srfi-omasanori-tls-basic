@@ -39,20 +39,18 @@ SRFI reduces the number of interfaces to provide essential functionalities
 while supporting various implementations. The interfaces, however, provide room
 for extensions by future SRFIs and implementations.
 
-This SRFI requires a socket API, including but not limited to SRFI 106. It
-assumes port I/O procedures are provided. It defines feature identifiers and
-version flags for implementations with relevant functionalities.
+This SRFI requires a port I/O API. It optinally depends on a socket API that
+may or may not conform to SRFI 106. It defines feature identifiers and version
+flags for implementations with relevant functionalities.
 
 === Omitted features and interfaces
 
 This SRFI omits file- and path-based interfaces to support implementations for
-embedded systems. It omits the ability to specify detailed parameters like
-cipher suites as it is too specific and can be easily misused. It omits
-inspection of established connections like retrieving the negotiated protocol
-version and cipher suite for simplicity. It omits Application-Layer Protocol
-Negotiation (ALPN) and Online Certificate Status Protocol (OCSP) supports
-since they depend on inspection of established connections. SRFI <tls-advanced>
-addresses them.
+embedded systems. It omits the ability to specify detailed parameters as it can
+be easily misused. It omits inspection of established connections for
+simplicity. It omits Application-Layer Protocol Negotiation (ALPN) and Online
+Certificate Status Protocol (OCSP) supports since they depend on inspection of
+established connections. SRFI <tls-advanced> addresses them.
 
 It omits configuration for insecure connections, like enabling obsolete
 protocol versions and weak cipher suites or disabling certificate validations.
@@ -76,6 +74,8 @@ interfaces. An implementation may provide both the server and client interfaces.
 ==== Feature identifier: `tls-client`
 
 ==== Feature identifier: `tls-server`
+
+==== Feature identifier: `tls-socket`
 
 ==== Version flag: `tls.name`
 
@@ -129,6 +129,10 @@ interfaces. An implementation may provide both the server and client interfaces.
 
 ==== Procedure: `tls-client _conf -> context_`
 
+==== Procedure: `tls-connect _context host service -> unspecified_`
+
+==== Procedure: `tls-connect-servername _context host service servername -> unspecified_`
+
 ==== Procedure: `tls-connect-socket _context socket servername -> unspecified_`
 
 === Server interfaces
@@ -138,6 +142,8 @@ interfaces. An implementation may provide both the server and client interfaces.
 ==== Procedure: `tls-verify-client-optional _conf -> unspecified_`
 
 ==== Procedure: `tls-server _conf -> context_`
+
+==== Procedure: `tls-accept _context service -> context_`
 
 ==== Procedure: `tls-accept-socket _context socket -> context_`
 

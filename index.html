@@ -531,21 +531,19 @@ while supporting various implementations. The interfaces, however, provide room
 for extensions by future SRFIs and implementations.</p>
 </div>
 <div class="paragraph">
-<p>This SRFI requires a socket API, including but not limited to SRFI 106. It
-assumes port I/O procedures are provided. It defines feature identifiers and
-version flags for implementations with relevant functionalities.</p>
+<p>This SRFI requires a port I/O API. It optinally depends on a socket API that
+may or may not conform to SRFI 106. It defines feature identifiers and version
+flags for implementations with relevant functionalities.</p>
 </div>
 <div class="sect2">
 <h3 id="_omitted_features_and_interfaces">Omitted features and interfaces</h3>
 <div class="paragraph">
 <p>This SRFI omits file- and path-based interfaces to support implementations for
-embedded systems. It omits the ability to specify detailed parameters like
-cipher suites as it is too specific and can be easily misused. It omits
-inspection of established connections like retrieving the negotiated protocol
-version and cipher suite for simplicity. It omits Application-Layer Protocol
-Negotiation (ALPN) and Online Certificate Status Protocol (OCSP) supports
-since they depend on inspection of established connections. SRFI &lt;tls-advanced&gt;
-addresses them.</p>
+embedded systems. It omits the ability to specify detailed parameters as it can
+be easily misused. It omits inspection of established connections for
+simplicity. It omits Application-Layer Protocol Negotiation (ALPN) and Online
+Certificate Status Protocol (OCSP) supports since they depend on inspection of
+established connections. SRFI &lt;tls-advanced&gt; addresses them.</p>
 </div>
 <div class="paragraph">
 <p>It omits configuration for insecure connections, like enabling obsolete
@@ -579,6 +577,10 @@ interfaces. An implementation may provide both the server and client interfaces.
 </div>
 <div class="sect3">
 <h4 id="_feature_identifier_tls_server">Feature identifier: <code>tls-server</code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_feature_identifier_tls_socket">Feature identifier: <code>tls-socket</code></h4>
 
 </div>
 <div class="sect3">
@@ -683,6 +685,14 @@ interfaces. An implementation may provide both the server and client interfaces.
 
 </div>
 <div class="sect3">
+<h4 id="_procedure_tls_connect_context_host_service_unspecified">Procedure: <code>tls-connect <em>context host service &#8594; unspecified</em></code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_procedure_tls_connect_servername_context_host_service_servername_unspecified">Procedure: <code>tls-connect-servername <em>context host service servername &#8594; unspecified</em></code></h4>
+
+</div>
+<div class="sect3">
 <h4 id="_procedure_tls_connect_socket_context_socket_servername_unspecified">Procedure: <code>tls-connect-socket <em>context socket servername &#8594; unspecified</em></code></h4>
 
 </div>
@@ -699,6 +709,10 @@ interfaces. An implementation may provide both the server and client interfaces.
 </div>
 <div class="sect3">
 <h4 id="_procedure_tls_server_conf_context">Procedure: <code>tls-server <em>conf &#8594; context</em></code></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_procedure_tls_accept_context_service_context">Procedure: <code>tls-accept <em>context service &#8594; context</em></code></h4>
 
 </div>
 <div class="sect3">
@@ -799,7 +813,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-11 08:36:48 +0900
+Last updated 2022-07-11 09:07:39 +0900
 </div>
 </div>
 </body>
