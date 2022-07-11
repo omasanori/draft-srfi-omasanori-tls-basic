@@ -20,7 +20,6 @@ cases.
 == Issues
 
 * Complete the specification
-* Check the portability of `tls-add-keypair`
 * Revisit private key problems (buffered I/O, password, wipe data after use)
 
 == Rationale
@@ -117,8 +116,6 @@ this specification.
 
 ==== Procedure: `tls-set-keypair _conf cert-port key-port -> unspecified_`
 
-==== Procedure: `tls-add-keypair _conf cert-port key-port -> unspecified_`
-
 ==== Procedure: `tls-clear-keys _conf -> unspecified_`
 
 ==== Procedure: `tls-set-verify-depth _conf depth -> unspecified_`
@@ -148,6 +145,8 @@ this specification.
 ==== Procedure: `tls-connect-socket _context socket servername -> unspecified_`
 
 === Server interfaces
+
+==== Procedure: `tls-add-keypair _conf cert-port key-port -> unspecified_`
 
 ==== Procedure: `tls-verify-client _conf -> unspecified_`
 
