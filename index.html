@@ -506,6 +506,9 @@ cases.</p>
 <li>
 <p>Check the portability of <code>tls-add-keypair</code></p>
 </li>
+<li>
+<p>Revisit private key problems (buffered I/O, password, wipe data after use)</p>
+</li>
 </ul>
 </div>
 </div>
@@ -611,35 +614,27 @@ interfaces. An implementation may provide both the server and client interfaces.
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_load_from_port_port_password_mem">Procedure: <code>tls-load-from-port <em>port [password] &#8594; mem</em></code></h4>
+<h4 id="_procedure_tls_set_ca_conf_port_unspecified">Procedure: <code>tls-set-ca <em>conf port &#8594; unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_unload_mem_unspecified">Procedure: <code>tls-unload <em>mem &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_cert_conf_port_unspecified">Procedure: <code>tls-set-cert <em>conf port &#8594; unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_ca_conf_cert_unspecified">Procedure: <code>tls-set-ca <em>conf cert &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_crl_conf_port_unspecified">Procedure: <code>tls-set-crl <em>conf port &#8594; unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_cert_conf_cert_unspecified">Procedure: <code>tls-set-cert <em>conf cert &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_key_conf_port_unspecified">Procedure: <code>tls-set-key <em>conf port &#8594; unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_crl_conf_crl_unspecified">Procedure: <code>tls-set-crl <em>conf crl &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_set_keypair_conf_cert_port_key_port_unspecified">Procedure: <code>tls-set-keypair <em>conf cert-port key-port &#8594; unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
-<h4 id="_procedure_tls_set_key_conf_key_unspecified">Procedure: <code>tls-set-key <em>conf key &#8594; unspecified</em></code></h4>
-
-</div>
-<div class="sect3">
-<h4 id="_procedure_tls_set_keypair_conf_cert_key_unspecified">Procedure: <code>tls-set-keypair <em>conf cert key &#8594; unspecified</em></code></h4>
-
-</div>
-<div class="sect3">
-<h4 id="_procedure_tls_add_keypair_conf_cert_key_unspecified">Procedure: <code>tls-add-keypair <em>conf cert key &#8594; unspecified</em></code></h4>
+<h4 id="_procedure_tls_add_keypair_conf_cert_port_key_port_unspecified">Procedure: <code>tls-add-keypair <em>conf cert-port key-port &#8594; unspecified</em></code></h4>
 
 </div>
 <div class="sect3">
@@ -813,7 +808,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-11 09:09:41 +0900
+Last updated 2022-07-11 09:20:50 +0900
 </div>
 </div>
 </body>

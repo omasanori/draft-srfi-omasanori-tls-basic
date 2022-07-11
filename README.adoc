@@ -21,6 +21,7 @@ cases.
 
 * Complete the specification
 * Check the portability of `tls-add-keypair`
+* Revisit private key problems (buffered I/O, password, wipe data after use)
 
 == Rationale
 
@@ -91,21 +92,17 @@ interfaces. An implementation may provide both the server and client interfaces.
 
 ==== Procedure: `tls-set-ciphers _conf cipher -> unspecified_`
 
-==== Procedure: `tls-load-from-port _port [password] -> mem_`
+==== Procedure: `tls-set-ca _conf port -> unspecified_`
 
-==== Procedure: `tls-unload _mem -> unspecified_`
+==== Procedure: `tls-set-cert _conf port -> unspecified_`
 
-==== Procedure: `tls-set-ca _conf cert -> unspecified_`
+==== Procedure: `tls-set-crl _conf port -> unspecified_`
 
-==== Procedure: `tls-set-cert _conf cert -> unspecified_`
+==== Procedure: `tls-set-key _conf port -> unspecified_`
 
-==== Procedure: `tls-set-crl _conf crl -> unspecified_`
+==== Procedure: `tls-set-keypair _conf cert-port key-port -> unspecified_`
 
-==== Procedure: `tls-set-key _conf key -> unspecified_`
-
-==== Procedure: `tls-set-keypair _conf cert key -> unspecified_`
-
-==== Procedure: `tls-add-keypair _conf cert key -> unspecified_`
+==== Procedure: `tls-add-keypair _conf cert-port key-port -> unspecified_`
 
 ==== Procedure: `tls-clear-keys _conf -> unspecified_`
 
