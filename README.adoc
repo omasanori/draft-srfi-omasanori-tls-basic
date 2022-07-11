@@ -20,7 +20,6 @@ cases.
 == Issues
 
 * Complete the specification
-* Revisit private key problems (buffered I/O, password, wipe data after use)
 
 == Rationale
 
