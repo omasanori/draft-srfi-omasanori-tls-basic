@@ -459,6 +459,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_rationale">Rationale</a>
 <ul class="sectlevel2">
 <li><a href="#_omitted_features_and_interfaces">Omitted features and interfaces</a></li>
+<li><a href="#_survey_of_prior_art">Survey of prior art</a></li>
 </ul>
 </li>
 <li><a href="#_specification">Specification</a>
@@ -535,8 +536,8 @@ for extensions by future SRFIs and implementations.</p>
 </div>
 <div class="paragraph">
 <p>This SRFI requires a port I/O API. It optinally depends on a socket API that
-may or may not conform to SRFI 106. It defines feature identifiers and version
-flags for implementations with relevant functionalities.</p>
+may conform to SRFI 106. It defines feature identifiers (see SRFI 0) and
+version flags (see SRFI 176).</p>
 </div>
 <div class="sect2">
 <h3 id="_omitted_features_and_interfaces">Omitted features and interfaces</h3>
@@ -555,6 +556,10 @@ While we know some use cases, we drop these functionalities from the interfaces
 for simplicity. SRFI &lt;tls-insecure&gt; addresses this.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_survey_of_prior_art">Survey of prior art</h3>
+
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -569,30 +574,47 @@ for simplicity. SRFI &lt;tls-insecure&gt; addresses this.</p>
 are to be interpreted as described in R7RS, section 1.3.2.</p>
 </div>
 <div class="paragraph">
-<p>An implementation must provide the configuration, context, and client or server
-interfaces. An implementation may provide both the server and client interfaces.</p>
+<p>An implementation must provide configuration, context, and client or server
+interfaces specified below. An implementation may provide both the server and
+client interfaces.</p>
 </div>
 <div class="sect2">
 <h3 id="_feature_identifiers_and_version_flags">Feature identifiers and version flags</h3>
+<div class="paragraph">
+<p>An implementation may provide any or all of the feature identifiers and version
+flags.</p>
+</div>
 <div class="sect3">
 <h4 id="_feature_identifier_tls_client">Feature identifier: <code>tls-client</code></h4>
-
+<div class="paragraph">
+<p>Client interfaces are provided.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_feature_identifier_tls_server">Feature identifier: <code>tls-server</code></h4>
-
+<div class="paragraph">
+<p>Server interfaces are provided.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="_feature_identifier_tls_socket">Feature identifier: <code>tls-socket</code></h4>
-
+<div class="paragraph">
+<p><code>tls-connect-socket</code>, <code>tls-accept-socket</code>, or both of them are provided.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_version_flag_tls_name">Version flag: <code>tls.name</code></h4>
-
+<h4 id="_version_flag_tls_name_string">Version flag: <code>tls.name string</code></h4>
+<div class="paragraph">
+<p>The name of underlying TLS implementation to implement interfaces defined by
+this specification.</p>
+</div>
 </div>
 <div class="sect3">
-<h4 id="_version_flag_tls_version">Version flag: <code>tls.version</code></h4>
-
+<h4 id="_version_flag_tls_version_string">Version flag: <code>tls.version string</code></h4>
+<div class="paragraph">
+<p>The version of underlying TLS implementation to implement interfaces defined by
+this specification.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -808,7 +830,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-11 09:20:50 +0900
+Last updated 2022-07-11 12:10:57 +0900
 </div>
 </div>
 </body>
