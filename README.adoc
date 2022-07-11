@@ -64,10 +64,6 @@ The words and phrases "`an error is signaled`",
 "`may`", "`required`", "`recommended`", and "`optional`" in this specification
 are to be interpreted as described in R7RS, section 1.3.2.
 
-An implementation must provide configuration, context, and client or server
-interfaces specified below. An implementation may provide both the server and
-client interfaces.
-
 === Feature identifiers and version flags
 
 An implementation may provide any or all of the feature identifiers and version
