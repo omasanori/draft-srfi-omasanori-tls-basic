@@ -179,7 +179,7 @@ At least, this SRFI should be able to implement with the following libraries:
 
 Additionally, the following libraries may be taken into account:
 
-* Amazon s2n
+* Amazon s2n-tls
 * Apple Secure Transport
 * axTLS (no commit to the repository since 2019, safe to drop?)
 * BearSSL
