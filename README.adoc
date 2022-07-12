@@ -49,19 +49,16 @@ threat nowadays, and the design of internet protocols has been shifting toward
 encrypted-by-default, using TLS or similar protocols. Thus, a portable API for
 TLS benefits programmers in writing networking code.
 
-Historically, TLS libraries have provided many functions. However, it leads to
-bloat and misconfiguration and, ultimately, vulnerabilities. An API for secure
-communications should not require programmers a lot of work to achieve secure
-communications. This SRFI is significantly influenced by libtls, a TLS library
-developed by the OpenBSD community "`as a response to the unnecessary
-challenges other APIs present in order to use them safely.`" Furthermore, this
-SRFI reduces the number of interfaces to provide essential functionalities
-while supporting various implementations. The interfaces, however, provide room
-for extensions by future SRFIs and implementations.
+This SRFI is significantly influenced by libtls, a TLS library developed by the
+OpenBSD community "`as a response to the unnecessary challenges other APIs
+present in order to use them safely.`" Furthermore, this SRFI reduces the
+number of interfaces to provide essential functionalities while supporting
+various implementations. The interfaces, however, provide room for extensions
+by future SRFIs and implementations.
 
 This SRFI requires a port I/O API and a socket API that may or may not conform
 to SRFI 106. It defines feature identifiers (see SRFI 0) and version flags
-(see SRFI 176). It is extended by SRFI <tls-advanced> and SRFI <tls-insecure>.
+(see SRFI 176).
 
 == Specification
 
@@ -158,7 +155,8 @@ process), and the code, if possible, or a link to it.
 
 == Acknowledgements
 
-??? Give credits where credits is due.
+As mentuioned in the rationale, the specification in this SRFI is significantly
+influenced by libtls. The author wants to acknowledge the LibreSSL developers.
 
 == References
 

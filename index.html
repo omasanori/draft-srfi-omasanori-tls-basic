@@ -572,20 +572,17 @@ encrypted-by-default, using TLS or similar protocols. Thus, a portable API for
 TLS benefits programmers in writing networking code.</p>
 </div>
 <div class="paragraph">
-<p>Historically, TLS libraries have provided many functions. However, it leads to
-bloat and misconfiguration and, ultimately, vulnerabilities. An API for secure
-communications should not require programmers a lot of work to achieve secure
-communications. This SRFI is significantly influenced by libtls, a TLS library
-developed by the OpenBSD community &#8220;as a response to the unnecessary
-challenges other APIs present in order to use them safely.&#8221; Furthermore, this
-SRFI reduces the number of interfaces to provide essential functionalities
-while supporting various implementations. The interfaces, however, provide room
-for extensions by future SRFIs and implementations.</p>
+<p>This SRFI is significantly influenced by libtls, a TLS library developed by the
+OpenBSD community &#8220;as a response to the unnecessary challenges other APIs
+present in order to use them safely.&#8221; Furthermore, this SRFI reduces the
+number of interfaces to provide essential functionalities while supporting
+various implementations. The interfaces, however, provide room for extensions
+by future SRFIs and implementations.</p>
 </div>
 <div class="paragraph">
 <p>This SRFI requires a port I/O API and a socket API that may or may not conform
 to SRFI 106. It defines feature identifiers (see SRFI 0) and version flags
-(see SRFI 176). It is extended by SRFI &lt;tls-advanced&gt; and SRFI &lt;tls-insecure&gt;.</p>
+(see SRFI 176).</p>
 </div>
 </div>
 </div>
@@ -760,7 +757,8 @@ process), and the code, if possible, or a link to it.</p>
 <h2 id="_acknowledgements">Acknowledgements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>??? Give credits where credits is due.</p>
+<p>As mentuioned in the rationale, the specification in this SRFI is significantly
+influenced by libtls. The author wants to acknowledge the LibreSSL developers.</p>
 </div>
 </div>
 </div>
@@ -832,7 +830,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-07-11 20:40:43 +0900
+Last updated 2022-07-12 10:20:28 +0900
 </div>
 </div>
 </body>
