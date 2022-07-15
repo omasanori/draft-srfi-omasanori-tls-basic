@@ -84,11 +84,11 @@ Server interfaces are provided.
 
 ==== Version flag: `(tls.name _string_)`
 
-The name of underlying TLS implementation.
+The name of TLS implementation.
 
 ==== Version flag: `(tls.version _string_)`
 
-The version of underlying TLS implementation.
+The version of TLS implementation.
 
 === Configuration interfaces
 
